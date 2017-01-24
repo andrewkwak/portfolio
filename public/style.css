@@ -47,6 +47,11 @@ body {
   padding: 10px;
   color: white;
 }
+
+.menu li a {
+  color: white;
+}
+
 .menu li a:visited {
   color: white;
 }
