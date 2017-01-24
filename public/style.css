@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato:100');
+
+
+#mainBody {
+  background-image: url('http://i.imgur.com/tDSjWmu.jpg');
+  background-size: cover;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+}
+
+#lastName {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+
+  font-weight: 100;
+}
+
+#folio {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+.header {
+  font-size: 50px;
+  position: fixed;
+  left: 5%;
+  color: white;
+
+}
+
+.menu{
+  position: fixed;
+  top: 100px;
+  left: 70px;
+  display: inline;
+  color: white;
+}
+
+.menu li{
+  display: inline;
+  padding: 10px;
+  color: white;
+}
+.menu li a:visited {
+  color: white;
+}
+
+.boardList li a:visited{
+  color: black;
+}
+
+#aboutContainer{
+  font-style: normal;
+  font-weight: 100;
+  position: fixed;
+  left: 54px;
+  top: 160px;
+  width: 400px;
+  height: 500px;
+  display: none;
+  color: white;
+}
+
+#aboutContainer li a:visited {
+  color: white;
+}
+
+#home {
+  position: fixed;
+  padding: 10px;
+
+}
+
+#portContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  padding: 20px;
+  overflow-y: hidden;
+  overflow: scroll;
+}
+
+#jukeImg {
+  display: block;
+  margin: 0 auto;
+}
+
+#portContainer p {
+  font-size: 14px;
+}
+
+#aboutHeader {
+  font-size: 50px;
+}

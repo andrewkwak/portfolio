@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>BLOG</title>
+</head>
+<body>
+  <div id="home">
+    <a href="/home"><img style="width: 40px; height: 40px;" src="http://www.uidownload.com/files/568/707/636/estate-home-house-real-icon.png" alt=""></a>
+  </div>
+  <div style="position: absolute; top: 50%;left: 50%; transform: translate(-50%, -50%); border: 1px solid black; padding: 20px">
+    <h1 style="font-size: 57px">BLOG</h1>
+    <div style="width: 500px; height: 150px; overflow: scroll;">
+      <% for( let x of titles ) { %>
+        <ul class="boardList" style="list-style: none; padding: 0 10px;">
+          <li><a href=<%="/board/" + x.id %>><%= x.title %></a></li>
+        </ul>
+      <% } %>
+    </div>
+    <form action="/board" method="post">
+      <input style="width: 496px; margin-top: 10px;" type="text" name="title" placeholder="TITLE">
+      <textarea style="display: block; margin-top: 6px; resize: none;" name="body" rows="8" cols="80" placeholder="BODY"></textarea>
+      <input style="margin-top: 6px" type="submit" value="SUBMIT">
+    </form>
+  </div>
+      <footer style="position: fixed; bottom: 5px; left: 5px;">MADE BY ANDREW</footer>
+</body>
+</html>

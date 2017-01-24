@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>ANDREW KWAK</title>
+</head>
+<body id="mainBody">
+  <h1 class="header">ANDREW <span id="lastName">KWAK</span></h1>
+  <ul class="menu">
+    <li><a href="/portfolio">PORTFOLIO</a></li>
+    <li><a href="#" id="aboutBtn" onclick="showAbout()" style="text-decoration:underline" >ABOUT</a></li>
+    <li><a href="/board">BLOG</a></li>
+  </ul>
+  <div id="aboutContainer">
+    <h2 style="text-align: center">ABOUT</h2>
+    <p>Andrew Kwak</p>
+    <p>Queens College</p>
+    <p>Aspiring Software Engineer</p>
+    <p> CONTACT ME: <p>
+    <ul>
+      <li><a href="https://www.github.com/andrewkwak" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/andrewjkwak" target="_blank">LinkedIn</a></li>
+      <li><a href="https://andrewjkwak@gmail.com" target="_blank">andrewjkwak@gmail.com</a></li>
+    </ul>
+  </div>
+  <script>
+    function showAbout(){
+      document.getElementById('aboutContainer').style.display = "block";
+    }
+  </script>
+</body>
+</html>
