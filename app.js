@@ -40,7 +40,7 @@ app.get('/board', function(request, response){
 })
 
 app.get('/board/:id', function(request, response){
-  pg.connect('postgres://localhost:5432/bulletinboard', function(err, client, done){
+  pg.connect(DATABASE_URL, function(err, client, done){
     let user_id = request.params.id;
     client.query(`select * from messages where id='${user_id}'`, function(err, result){
       response.render('message', { post: result.rows[0] });
@@ -51,7 +51,7 @@ app.get('/board/:id', function(request, response){
 });
 
 app.post('/board', function(request, response){
-  pg.connect('postgres://localhost:5432/bulletinboard', function(err, client, done){
+  pg.connect(DATABASE_URL, function(err, client, done){
     client.query(`insert into messages (title, body) values ('${request.body.title}', '${request.body.body}');`, function(err, result){
     if(request.body.title !== ""){
       response.redirect('/board');
