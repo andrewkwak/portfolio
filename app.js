@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 var port = process.env.PORT || 3000;
+var DATABASE_URL = process.env.DATABASE_URL || 'postgres://localhost:5432/bulletinboard'
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -29,7 +30,7 @@ app.get('/portfolio', function(request, response){
 
 app.get('/board', function(request, response){
   //process.env.DATABASE_URL
-  pg.connect(process.env.DATABASE_URL, function(err, client, done){
+  pg.connect(DATABASE_URL, function(err, client, done){
     client.query('select * from messages', function(err, result){
       response.render('board', {titles: result.rows});
       done();
