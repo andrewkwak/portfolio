@@ -72,6 +72,10 @@ body {
   color: white;
 }
 
+#aboutContainer li a {
+  color: white;
+}
+
 #aboutContainer li a:visited {
   color: white;
 }
